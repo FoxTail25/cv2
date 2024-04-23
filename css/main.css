@@ -1,6 +1,5 @@
 main {
     flex-grow : 1;
-    background: green;
     transition: 1s;
 
     .radio_block {

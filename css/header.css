@@ -1,3 +1,44 @@
 header {
-    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--primari_color);
+
+    nav {
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
+    .mobil_menu {
+        margin: 10px;
+
+        @media (min-width: 900px) {
+            display: none;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        .line {
+            width: 25px;
+            height: 3px;
+            border-radius: 2px;
+            background: var(--primari_color);
+            margin: 3px;
+            border: 1px solid var(--primari_color);
+            transition: .2s;
+
+        }
+        &.open {
+            .l1 {
+                transform:translateY(10px) rotate(45deg);
+            }
+            .l2 {
+                opacity: 0;
+            }
+            .l3 {
+                transform: translateY(-10px) rotate(-45deg);
+            }
+        }
+    }
 }
