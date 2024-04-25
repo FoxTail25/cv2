@@ -2,27 +2,27 @@ const header_menu_item = [
     
     {
         name: 'hello',
-        href: '#'
+        href: '#hello'
     },
     {
         name: 'skills',
-        href: '#'
+        href: '#skills'
     },
     {
         name: 'expiriens',
-        href: '#'
+        href: '#expiriens'
     },
     {
         name: 'education',
-        href: '#'
+        href: '#education'
     },
     {
         name: 'portfolio',
-        href: '#'
+        href: '#portfolio'
     },
     {
         name: 'contact me',
-        href: '#'
+        href: '#contact_me'
     },
 ]
 
