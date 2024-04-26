@@ -29,7 +29,10 @@ function close_mobil_menu() {
         let menu_item = document.createElement('a')
         menu_item.href = elem.href;
         menu_item.textContent = elem.name;
-        menu_item.addEventListener('click', close_mobil_menu)
+        menu_item.addEventListener('click', (event)=> {
+            close_mobil_menu();
+            scrollSmooth(event, elem.name)
+    })
         header_nav_mobil.appendChild(menu_item)
         header_nav_mobil.className = 'mobil_menu'
     })
@@ -37,14 +40,35 @@ function close_mobil_menu() {
 
 
     const header_nav_desktop = document.createElement('nav');
-    
+
     header_menu_item.forEach(elem => {
         let menu_item = document.createElement('a')
         menu_item.href = elem.href;
         menu_item.textContent = elem.name;
-        // menu_item.addEventListener('click', close_mobil_menu)
+        menu_item.addEventListener('click', (event)=> scrollSmooth(event, elem.name))
         header_nav_desktop.appendChild(menu_item)
         header_nav_desktop.className = 'desctop_menu'
     })
     header_content.appendChild(header_nav_desktop)
-}())
+}());
+
+//--------------------------------------------------
+// Добавление тени хедеру при скролле_______________
+const header = document.querySelector('header')
+window.addEventListener('scroll', () => {
+    window.pageYOffset
+        ? header.classList.add('shadow')
+        : header.classList.remove('shadow');
+        // console.dir(window)
+})
+//--------------------------------------------------
+// Плавная прокрутка_______________________________
+function scrollSmooth(e, name) {
+    // console.log(e,name)
+    e.preventDefault()
+    const elem = document.querySelector(`#${name}`)
+    elem.scrollIntoView({
+        block:'start',
+        behavior:'smooth'
+    })
+}

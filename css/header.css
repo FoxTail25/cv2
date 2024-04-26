@@ -5,11 +5,15 @@ header {
     position       : fixed;
     background-color: white;
     width          : 100vw;
+    height: 70px;
     .header_content {
         width          : calc(100% - 40px);
         display        : flex;
         justify-content: space-between;
         padding        : 20px;
+    }
+    &.shadow {
+        box-shadow: 0 0 15px 2px var(--secondary_color3);
     }
 
     nav.desctop_menu {
@@ -22,7 +26,6 @@ header {
     }
 
     .mobil_menu_btn {
-        /* margin : 10px; */
         z-index: 2;
 
         @media (min-width: 900px) {
@@ -66,33 +69,3 @@ header {
     }
 }
 
-.mobil_menu_content {
-    position       : absolute;
-    height         : 100vh;
-    width          : inherit;
-    top            : -100vh;
-    background     : var(--primary_color);
-    transition     : .2s;
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-
-    .mobil_menu {
-        width     : fit-content;
-        text-align: center;
-    }
-
-    a {
-        display: block;
-        color  : white;
-    }
-
-    &.open {
-        top: 0;
-
-        @media (min-width:900px) {
-            top: -100vh;
-        }
-    }
-
-}
