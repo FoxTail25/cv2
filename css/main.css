@@ -3,12 +3,30 @@ main {
     transition: 1s;
 
     .section {
-        border-bottom: 1px solid var(--primary_color);
+        border-bottom    : 1px solid var(--primary_color);
         scroll-margin-top: 80px;
-        padding: 0 20px;
-        /* box-sizing: border-box; */
-        /* width: 100vw; */
+        padding          : 0 20px;
+        /* box-sizing    : border-box; */
+        display          : flex;
+
+        .primary_block,
+        .secondary_block {
+            display       : flex;
+            flex-direction: column;
+            p{
+                margin: 0 0 5px 0;
+            }
+        }
+
+        .primary_block {
+            width: calc(100% / 3);
+        }
+
+        .secondary_block {
+            width: calc(100% / 3 * 2);
+        }
     }
+
     #hello {
         margin-top: 80px;
     }
