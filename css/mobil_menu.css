@@ -3,29 +3,33 @@
     height         : 100vh;
     width          : inherit;
     top            : -100vh;
+    right: -100vw;
     background     : var(--primary_color);
-    transition     : .2s;
+    transition     : all.2s;
     display        : flex;
     justify-content: center;
     align-items    : center;
 	opacity: 0;
-
+    
     .mobil_menu {
         width     : fit-content;
         text-align: center;
     }
-
+    
     a {
         display: block;
         color  : white;
     }
-
+    
     &.open {
-		opacity: 1;
+        transition     : all.2s;
+        opacity: 1;
         top: 0;
+        right: 0;
         @media (min-width:900px) {
             top: -100vh;
+            right: -100vw;
         }
     }
-
+    
 }

@@ -4,47 +4,66 @@ main {
 
     .section {
         border-bottom    : 1px solid var(--primary_color);
-        scroll-margin-top: 80px;
-        padding          : 0 20px;
+        scroll-margin-top: 70px;
+        padding          : 0 10px;
+        /* box-sizing: border-box; */
+        /* width: 100vw; */
 
-        &>h1,>h2 {
-            margin-bottom: 0;
+
+        display: flex;
+
+
+        .primary_block,
+        .secondary_block {
+            display       : flex;
+            flex-direction: column;
+            /* padding: 0 10px; */
+
+            p {
+                margin: 0 0 5px 0;
+            }
         }
-        .content {
 
-            display: flex;
-            width  : 100%;
+        .primary_block {
+            width: calc(100% / 3);
+            padding-right: 10px;
+            h1,h2 {
+                margin-top: 10px;
+            }
+        }
+
+        .secondary_block {
+            width         : calc(100% / 3 * 2);
+            display       : flex;
+            flex-direction: row;
+            flex-wrap     : wrap;
+            margin-top: 20px;
+
+            &>div.skills_block {
+                width: 50%;
+
+            }
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+
+                &>div.skills_block {
+                    width: 100%;
+
+                }
+            }
+        }
+
+        @media (max-width: 500px) {
+            flex-direction: column;
 
             .primary_block,
             .secondary_block {
-                display       : flex;
-                flex-direction: column;
-
-                p {
-                    margin: 0 0 5px 0;
-                }
-            }
-
-            .primary_block {
-                width: calc(100% / 3);
-            }
-
-            .secondary_block {
-                width: calc(100% / 3 * 2);
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-
-                &>div.skills_block {
-                    width: 49%;
-
-                }
-                h3,h4 {
-                    margin: 0;
-                }
-                p {
-                    margin-bottom: 10px;
-                }
+                width: 100%;
             }
         }
     }
