@@ -35,8 +35,11 @@ main {
         .secondary_block {
             width         : calc(100% / 3 * 2);
             display       : flex;
-            flex-direction: row;
-            flex-wrap     : wrap;
+            &:not(.education){
+
+                flex-direction: row;
+                flex-wrap     : wrap;
+            }
             margin-top: 20px;
 
             &>div.skills_block {
@@ -66,10 +69,13 @@ main {
                 width: 100%;
             }
         }
+        details {
+            padding: 10px 0;
+        }
     }
 
     #hello {
-        margin-top: 80px;
+        margin-top: 70px;
     }
 
 }
