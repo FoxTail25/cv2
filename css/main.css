@@ -6,18 +6,13 @@ main {
         border-bottom    : 1px solid var(--primary_color);
         scroll-margin-top: 70px;
         padding          : 0 10px;
-        /* box-sizing: border-box; */
-        /* width: 100vw; */
-
 
         display: flex;
-
 
         .primary_block,
         .secondary_block {
             display       : flex;
             flex-direction: column;
-            /* padding: 0 10px; */
 
             p {
                 margin: 0 0 5px 0;
@@ -82,13 +77,18 @@ main {
                 width: 100%;
             }
         }
-        details {
-            padding: 10px 0;
-        }
     }
-
+    
     #hello {
         margin-top: 70px;
+    }
+    #education {
+        details {
+            padding: 10px 0;
+            h3 {
+                display: inline;
+            }
+        }
     }
 
 }
