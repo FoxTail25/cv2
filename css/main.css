@@ -25,15 +25,28 @@ main {
         }
 
         .primary_block {
+            
             width: calc(100% / 3);
+            &.hello {
+                width: calc(100% / 2); 
+            }   
+            
             padding-right: 10px;
             h1,h2 {
                 margin-top: 10px;
             }
         }
-
+        
+        
+        
         .secondary_block {
+
             width         : calc(100% / 3 * 2);
+
+           &.hello {
+                width: calc(100% / 2); 
+            } 
+
             display       : flex;
             &:not(.education){
 
