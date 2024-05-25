@@ -4,7 +4,9 @@ main {
     padding: 0 50px;
     max-width: 1000px;
     margin: 0 auto;
-
+    @media (max-width:500px) {
+        padding: 0 20px;
+    }
     .section {
         border-bottom    : 1px solid var(--primary_color);
         scroll-margin-top: 70px;
@@ -26,7 +28,10 @@ main {
             
             width: calc(100% / 3);
             &.hello {
-                width: calc(100% / 2); 
+                width: calc(100% / 2);
+                @media (max-width: 500px) {
+                    width: 100%
+                } 
             }   
             
             padding-right: 10px;
@@ -43,6 +48,9 @@ main {
 
            &.hello {
                 width: calc(100% / 2); 
+                @media (max-width: 500px) {
+                    width: 100%
+                } 
             } 
 
             display       : flex;
@@ -86,6 +94,9 @@ main {
         margin-top: 70px;
         img {
             width: 100%;
+        }
+        @media (max-width: 425px) {
+            
         }
     }
     #education {
